@@ -1,0 +1,17 @@
+name: test
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # NOTE: Stub. Replace with a real integration test that invokes the
+      # action with a GitHub App token and asserts the created PR.
+      - name: Placeholder
+        shell: bash
+        run: echo "integration test placeholder"
