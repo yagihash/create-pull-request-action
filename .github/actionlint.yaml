@@ -1,0 +1,9 @@
+# actionlint v1.7.12 does not yet understand the parallel steps feature
+# (background steps + wait-all) introduced on 2026-06-25:
+# https://github.blog/changelog/2026-06-25-actions-steps-can-now-be-run-in-parallel/
+# Ignore the resulting false positives until actionlint adds support.
+paths:
+  .github/workflows/ghalint.yml:
+    ignore:
+      - 'unexpected key "background" for step'
+      - 'step must run script with "run" section or run action with "uses" section'
